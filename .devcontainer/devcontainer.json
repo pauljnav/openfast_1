@@ -1,6 +1,0 @@
-{
-    "name": "OpenFAST Simulation Ready",
-    "image": "ghcr.io/openfast/openfast:latest",
-    // This maps your repo content to the /files directory inside the container
-    "workspaceFolder": "/files" 
-}
