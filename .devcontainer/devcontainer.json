@@ -1,4 +1,8 @@
 {
   "image": "ghcr.io/openfast/openfast:latest",
-  "features": "ghcr.io/devcontainers-extra/features/cmake:1"
+  "features": {
+        // Installs Miniconda for environment management
+        "ghcr.io/devcontainers/features/conda:1": {},
+        "ghcr.io/devcontainers-extra/features/cmake:1": {}
+    }
 }
