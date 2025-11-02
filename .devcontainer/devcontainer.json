@@ -1,0 +1,29 @@
+{
+    "name": "OpenFAST Cross-Compilation",
+    "image": "ghcr.io/openfast/openfast:latest",
+    
+    // Mount the workspace to /files inside the container, as you specified.
+    // The VS Code Dev Containers extension handles this automatically, but 
+    // we can ensure the workspace folder name is what we expect.
+    "workspaceFolder": "/files", 
+
+    // Use postCreateCommand to run setup steps right after the container is built,
+    // which is useful for cross-compilation tools or initial configuration.
+    "postCreateCommand": "echo 'Container ready for cross-compilation in /files'",
+
+    // This runs a command every time a user attaches (e.g., opens) the Codespace.
+    // We'll set the shell prompt to remind you where you are working.
+    "postAttachCommand": "PS1='[OPENFAST-CC:/files] ' /bin/bash",
+    
+    // Configuration specific to VS Code in the Codespace
+    "customizations": {
+        "vscode": {
+            "settings": {},
+            "extensions": [
+                "ms-vscode.cpptools",
+                "twxs.cmake",
+                "ms-vscode.cmake-tools"
+            ]
+        }
+    }
+}
